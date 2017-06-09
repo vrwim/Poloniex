@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24B656A77FDF4F4F555C3E1C /* Pods_PoloniexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176716D7D02E8FD788F1EB64 /* Pods_PoloniexTests.framework */; };
+		6589316416FD0F4B74839C1F /* Pods_Poloniex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DB55A0126931FEA7AC7B9E /* Pods_Poloniex.framework */; };
+		AB6188331EEA9C4100583D9F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6188321EEA9C4100583D9F /* Action.swift */; };
+		AB6C99941ECCE8D400A4088C /* TradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99931ECCE8D400A4088C /* TradesViewController.swift */; };
+		AB6C99971ECCEB7700A4088C /* BuySuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99961ECCEB7700A4088C /* BuySuggestion.swift */; };
+		AB6C99991ECE166800A4088C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99981ECE166800A4088C /* Currency.swift */; };
+		AB6C999B1ECE3A2000A4088C /* TradeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C999A1ECE3A2000A4088C /* TradeTableViewCell.swift */; };
+		AB6C999E1ED0794000A4088C /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C999D1ED0794000A4088C /* AttributedStringBuilder.swift */; };
 		ABB8FAB11EC7703B00D11AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAB01EC7703B00D11AF4 /* AppDelegate.swift */; };
-		ABB8FAB31EC7703B00D11AF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAB21EC7703B00D11AF4 /* ViewController.swift */; };
+		ABB8FAB31EC7703B00D11AF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAB21EC7703B00D11AF4 /* LoginViewController.swift */; };
 		ABB8FAB61EC7703B00D11AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB8FAB41EC7703B00D11AF4 /* Main.storyboard */; };
 		ABB8FAB91EC7703B00D11AF4 /* Poloniex.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAB71EC7703B00D11AF4 /* Poloniex.xcdatamodeld */; };
 		ABB8FABB1EC7703B00D11AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB8FABA1EC7703B00D11AF4 /* Assets.xcassets */; };
 		ABB8FABE1EC7703B00D11AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB8FABC1EC7703B00D11AF4 /* LaunchScreen.storyboard */; };
 		ABB8FAC91EC7703C00D11AF4 /* PoloniexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAC81EC7703C00D11AF4 /* PoloniexTests.swift */; };
 		ABB8FAD41EC7703C00D11AF4 /* PoloniexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAD31EC7703C00D11AF4 /* PoloniexUITests.swift */; };
+		ABB8FAE51EC770CB00D11AF4 /* PoloniexAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAE41EC770CB00D11AF4 /* PoloniexAPI.swift */; };
+		ABB8FAEA1EC780AC00D11AF4 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAE91EC780AC00D11AF4 /* Crypto.swift */; };
+		ABB8FAEC1ECA342A00D11AF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAEB1ECA342A00D11AF4 /* Extensions.swift */; };
+		ABCA0E791ECCCC9F00EC95E4 /* PoloniexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA0E781ECCCC9F00EC95E4 /* PoloniexController.swift */; };
+		C40763577593A912CE423860 /* Pods_PoloniexUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F27B09D13064752833D6F8 /* Pods_PoloniexUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +48,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10FDA36698268BDF60674EA4 /* Pods-Poloniex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poloniex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poloniex/Pods-Poloniex.debug.xcconfig"; sourceTree = "<group>"; };
+		176716D7D02E8FD788F1EB64 /* Pods_PoloniexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25DB55A0126931FEA7AC7B9E /* Pods_Poloniex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poloniex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42F27B09D13064752833D6F8 /* Pods_PoloniexUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50CCAAF6DE959426D7163D07 /* Pods-Poloniex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poloniex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poloniex/Pods-Poloniex.release.xcconfig"; sourceTree = "<group>"; };
+		61F59DB30B90871814D92210 /* Pods-PoloniexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexUITests/Pods-PoloniexUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		803014F346D22BA511A5DE7C /* Pods-PoloniexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTests/Pods-PoloniexTests.debug.xcconfig"; sourceTree = "<group>"; };
+		83142262A78E75142302A927 /* Pods-PoloniexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexUITests/Pods-PoloniexUITests.release.xcconfig"; sourceTree = "<group>"; };
+		83B32DF652F2838CFB60FC08 /* Pods-PoloniexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTests/Pods-PoloniexTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB6188321EEA9C4100583D9F /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		AB6C99931ECCE8D400A4088C /* TradesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradesViewController.swift; sourceTree = "<group>"; };
+		AB6C99961ECCEB7700A4088C /* BuySuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuySuggestion.swift; sourceTree = "<group>"; };
+		AB6C99981ECE166800A4088C /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		AB6C999A1ECE3A2000A4088C /* TradeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeTableViewCell.swift; sourceTree = "<group>"; };
+		AB6C999D1ED0794000A4088C /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
 		ABB8FAAD1EC7703B00D11AF4 /* Poloniex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poloniex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB8FAB01EC7703B00D11AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ABB8FAB21EC7703B00D11AF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABB8FAB21EC7703B00D11AF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ABB8FAB51EC7703B00D11AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABB8FAB81EC7703B00D11AF4 /* Poloniex.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Poloniex.xcdatamodel; sourceTree = "<group>"; };
 		ABB8FABA1EC7703B00D11AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +77,11 @@
 		ABB8FACF1EC7703C00D11AF4 /* PoloniexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoloniexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB8FAD31EC7703C00D11AF4 /* PoloniexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoloniexUITests.swift; sourceTree = "<group>"; };
 		ABB8FAD51EC7703C00D11AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB8FAE41EC770CB00D11AF4 /* PoloniexAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoloniexAPI.swift; sourceTree = "<group>"; };
+		ABB8FAE61EC77E8D00D11AF4 /* Poloniex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poloniex-Bridging-Header.h"; sourceTree = "<group>"; };
+		ABB8FAE91EC780AC00D11AF4 /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		ABB8FAEB1ECA342A00D11AF4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ABCA0E781ECCCC9F00EC95E4 /* PoloniexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoloniexController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6589316416FD0F4B74839C1F /* Pods_Poloniex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B656A77FDF4F4F555C3E1C /* Pods_PoloniexTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +105,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40763577593A912CE423860 /* Pods_PoloniexUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A63315A40368F5062949846 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10FDA36698268BDF60674EA4 /* Pods-Poloniex.debug.xcconfig */,
+				50CCAAF6DE959426D7163D07 /* Pods-Poloniex.release.xcconfig */,
+				803014F346D22BA511A5DE7C /* Pods-PoloniexTests.debug.xcconfig */,
+				83B32DF652F2838CFB60FC08 /* Pods-PoloniexTests.release.xcconfig */,
+				61F59DB30B90871814D92210 /* Pods-PoloniexUITests.debug.xcconfig */,
+				83142262A78E75142302A927 /* Pods-PoloniexUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AB6C99951ECCEB6000A4088C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AB6C99961ECCEB7700A4088C /* BuySuggestion.swift */,
+				AB6C99981ECE166800A4088C /* Currency.swift */,
+				AB6188321EEA9C4100583D9F /* Action.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		AB6C999C1ED0790D00A4088C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AB6C999D1ED0794000A4088C /* AttributedStringBuilder.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		ABB8FAA41EC7703B00D11AF4 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +150,9 @@
 				ABB8FAC71EC7703C00D11AF4 /* PoloniexTests */,
 				ABB8FAD21EC7703C00D11AF4 /* PoloniexUITests */,
 				ABB8FAAE1EC7703B00D11AF4 /* Products */,
+				9A63315A40368F5062949846 /* Pods */,
+				D450AF03D860E8D9C5AD41E2 /* Frameworks */,
+				ABB8FAE61EC77E8D00D11AF4 /* Poloniex-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +169,17 @@
 		ABB8FAAF1EC7703B00D11AF4 /* Poloniex */ = {
 			isa = PBXGroup;
 			children = (
+				AB6C999C1ED0790D00A4088C /* Utilities */,
+				ABB8FAE11EC7707D00D11AF4 /* Core */,
 				ABB8FAB01EC7703B00D11AF4 /* AppDelegate.swift */,
-				ABB8FAB21EC7703B00D11AF4 /* ViewController.swift */,
+				ABB8FAB21EC7703B00D11AF4 /* LoginViewController.swift */,
 				ABB8FAB41EC7703B00D11AF4 /* Main.storyboard */,
 				ABB8FABA1EC7703B00D11AF4 /* Assets.xcassets */,
 				ABB8FABC1EC7703B00D11AF4 /* LaunchScreen.storyboard */,
 				ABB8FABF1EC7703B00D11AF4 /* Info.plist */,
 				ABB8FAB71EC7703B00D11AF4 /* Poloniex.xcdatamodeld */,
+				AB6C99931ECCE8D400A4088C /* TradesViewController.swift */,
+				AB6C999A1ECE3A2000A4088C /* TradeTableViewCell.swift */,
 			);
 			path = Poloniex;
 			sourceTree = "<group>";
@@ -128,6 +202,44 @@
 			path = PoloniexUITests;
 			sourceTree = "<group>";
 		};
+		ABB8FAE11EC7707D00D11AF4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AB6C99951ECCEB6000A4088C /* Classes */,
+				ABB8FAE31EC770B700D11AF4 /* Controllers */,
+				ABB8FAE21EC7709400D11AF4 /* API */,
+				ABB8FAE91EC780AC00D11AF4 /* Crypto.swift */,
+				ABB8FAEB1ECA342A00D11AF4 /* Extensions.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		ABB8FAE21EC7709400D11AF4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ABB8FAE41EC770CB00D11AF4 /* PoloniexAPI.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		ABB8FAE31EC770B700D11AF4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA0E781ECCCC9F00EC95E4 /* PoloniexController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D450AF03D860E8D9C5AD41E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25DB55A0126931FEA7AC7B9E /* Pods_Poloniex.framework */,
+				176716D7D02E8FD788F1EB64 /* Pods_PoloniexTests.framework */,
+				42F27B09D13064752833D6F8 /* Pods_PoloniexUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB8FAD81EC7703C00D11AF4 /* Build configuration list for PBXNativeTarget "Poloniex" */;
 			buildPhases = (
+				86081FA8D1427B2FA9A8B44B /* [CP] Check Pods Manifest.lock */,
 				ABB8FAA91EC7703B00D11AF4 /* Sources */,
 				ABB8FAAA1EC7703B00D11AF4 /* Frameworks */,
 				ABB8FAAB1EC7703B00D11AF4 /* Resources */,
+				C7AA95C89645608F65A55891 /* [CP] Embed Pods Frameworks */,
+				58739EFF659012874FDCFBF8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB8FADB1EC7703C00D11AF4 /* Build configuration list for PBXNativeTarget "PoloniexTests" */;
 			buildPhases = (
+				46A6DF193EEF9E423006FAB9 /* [CP] Check Pods Manifest.lock */,
 				ABB8FAC01EC7703C00D11AF4 /* Sources */,
 				ABB8FAC11EC7703C00D11AF4 /* Frameworks */,
 				ABB8FAC21EC7703C00D11AF4 /* Resources */,
+				C29C03FCAFD117D18AD52F3A /* [CP] Embed Pods Frameworks */,
+				903715763F97B980989676A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +288,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB8FADE1EC7703C00D11AF4 /* Build configuration list for PBXNativeTarget "PoloniexUITests" */;
 			buildPhases = (
+				2C5529536401BF4AA081D7A6 /* [CP] Check Pods Manifest.lock */,
 				ABB8FACB1EC7703C00D11AF4 /* Sources */,
 				ABB8FACC1EC7703C00D11AF4 /* Frameworks */,
 				ABB8FACD1EC7703C00D11AF4 /* Resources */,
+				0CFAE51051754A47168C8AD4 /* [CP] Embed Pods Frameworks */,
+				E7469ADFEB039AAF4FB2F7EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +318,7 @@
 					ABB8FAAC1EC7703B00D11AF4 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 8P6EQAF399;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					ABB8FAC31EC7703C00D11AF4 = {
@@ -260,14 +382,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CFAE51051754A47168C8AD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexUITests/Pods-PoloniexUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C5529536401BF4AA081D7A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		46A6DF193EEF9E423006FAB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		58739EFF659012874FDCFBF8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poloniex/Pods-Poloniex-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86081FA8D1427B2FA9A8B44B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		903715763F97B980989676A9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTests/Pods-PoloniexTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C29C03FCAFD117D18AD52F3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTests/Pods-PoloniexTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7AA95C89645608F65A55891 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poloniex/Pods-Poloniex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7469ADFEB039AAF4FB2F7EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexUITests/Pods-PoloniexUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ABB8FAA91EC7703B00D11AF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB8FAB31EC7703B00D11AF4 /* ViewController.swift in Sources */,
+				ABCA0E791ECCCC9F00EC95E4 /* PoloniexController.swift in Sources */,
+				AB6188331EEA9C4100583D9F /* Action.swift in Sources */,
+				ABB8FAE51EC770CB00D11AF4 /* PoloniexAPI.swift in Sources */,
+				AB6C999B1ECE3A2000A4088C /* TradeTableViewCell.swift in Sources */,
+				ABB8FAEC1ECA342A00D11AF4 /* Extensions.swift in Sources */,
+				ABB8FAB31EC7703B00D11AF4 /* LoginViewController.swift in Sources */,
+				ABB8FAEA1EC780AC00D11AF4 /* Crypto.swift in Sources */,
 				ABB8FAB11EC7703B00D11AF4 /* AppDelegate.swift in Sources */,
+				AB6C99991ECE166800A4088C /* Currency.swift in Sources */,
 				ABB8FAB91EC7703B00D11AF4 /* Poloniex.xcdatamodeld in Sources */,
+				AB6C99971ECCEB7700A4088C /* BuySuggestion.swift in Sources */,
+				AB6C999E1ED0794000A4088C /* AttributedStringBuilder.swift in Sources */,
+				AB6C99941ECCE8D400A4088C /* TradesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,32 +689,40 @@
 		};
 		ABB8FAD91EC7703C00D11AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10FDA36698268BDF60674EA4 /* Pods-Poloniex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8P6EQAF399;
 				INFOPLIST_FILE = Poloniex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.vrwim.Poloniex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Poloniex-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		ABB8FADA1EC7703C00D11AF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50CCAAF6DE959426D7163D07 /* Pods-Poloniex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8P6EQAF399;
 				INFOPLIST_FILE = Poloniex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.vrwim.Poloniex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Poloniex-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		ABB8FADC1EC7703C00D11AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 803014F346D22BA511A5DE7C /* Pods-PoloniexTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +738,7 @@
 		};
 		ABB8FADD1EC7703C00D11AF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83B32DF652F2838CFB60FC08 /* Pods-PoloniexTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +754,7 @@
 		};
 		ABB8FADF1EC7703C00D11AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61F59DB30B90871814D92210 /* Pods-PoloniexUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8P6EQAF399;
@@ -489,6 +769,7 @@
 		};
 		ABB8FAE01EC7703C00D11AF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83142262A78E75142302A927 /* Pods-PoloniexUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8P6EQAF399;
@@ -520,6 +801,7 @@
 				ABB8FADA1EC7703C00D11AF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABB8FADB1EC7703C00D11AF4 /* Build configuration list for PBXNativeTarget "PoloniexTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +810,7 @@
 				ABB8FADD1EC7703C00D11AF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABB8FADE1EC7703C00D11AF4 /* Build configuration list for PBXNativeTarget "PoloniexUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +819,7 @@
 				ABB8FAE01EC7703C00D11AF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
