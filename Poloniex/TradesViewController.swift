@@ -11,10 +11,15 @@ import UIKit
 class TradesViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
-	
+    @IBOutlet weak var progressView: UIProgressView!
+    
 	var refreshControl: UIRefreshControl!
 	
 	var trades: [BuySuggestion] = []
+    
+    var infoButton: UIBarButtonItem!
+    
+    var activityIndicator: UIBarButtonItem!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +34,14 @@ class TradesViewController: UIViewController {
 		
 		// let performButton = UIBarButtonItem(title: "Do it!", style: .plain, target: self, action: #selector(performActions))
 		// TODO add to bar when buy & sell are ready
-		
-		let infoButton = UIBarButtonItem(title: "Info", style: .done, target: self, action: #selector(showInfo))
+        
+        infoButton = UIBarButtonItem(title: "Info", style: .done, target: self, action: #selector(showInfo))
 		navigationItem.leftBarButtonItem = infoButton
+        
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicatorView.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
+        activityIndicatorView.startAnimating()
+        activityIndicator = UIBarButtonItem(customView: activityIndicatorView)
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -39,26 +49,32 @@ class TradesViewController: UIViewController {
 		
 		refreshControl.beginRefreshing()
 		fetchTrades()
-	}
-	
-	func fetchTrades() {
-		PoloniexController.instance.fetchPossibleTrades {
-			trades in
-			
-			self.trades = trades.sorted {$0.currency.currentPrice!/$0.currency.weightedAverage > $1.currency.currentPrice!/$1.currency.weightedAverage}
+    }
+    
+    func fetchTrades() {
+        PoloniexController.instance.fetchPossibleTrades (update: {
+            update in
+            self.progressView.isHidden = false
+            if update == 1 {
+                self.progressView.progress = 0
+                self.progressView.isHidden = true
+            }
+            self.progressView.progress = update
+        }) {
+            trades in
+            self.trades = trades.sorted {$0.currency.currentPrice!/$0.currency.weightedAverage > $1.currency.currentPrice!/$1.currency.weightedAverage}
 			self.tableView.reloadData()
 			
 			self.refreshControl.endRefreshing()
 		}
 	}
 	
-	func performActions() {
-		
-	}
-	
 	func showInfo() {
-		PoloniexController.instance.fetchInfo {
+        navigationItem.leftBarButtonItem = activityIndicator
+        
+        PoloniexController.instance.fetchInfo {
 			info in
+            self.navigationItem.leftBarButtonItem = self.infoButton
 			let alert = UIAlertController(title: "Info", message: info, preferredStyle: .alert)
 			alert.addAction(UIAlertAction(title: "Nice! 👍", style: .default, handler: nil))
 			self.present(alert, animated: true, completion: nil)

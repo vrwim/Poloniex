@@ -30,19 +30,23 @@ class PoloniexController {
 	
 	func login(apiKey: String, apiSecret: String) {
 		UserDefaults.standard.set(apiKey, forKey: "apiKey")
-		UserDefaults.standard.set(apiSecret, forKey: "apiSecret")
+        UserDefaults.standard.set(apiSecret, forKey: "apiSecret")
 		poloniexApi = PoloniexAPI(apiKey: apiKey, apiSecret: apiSecret)
 	}
 	
 	/// Fetches a list of possible
-	func fetchPossibleTrades(completionHandler: @escaping ([BuySuggestion]) -> ()) {
+    func fetchPossibleTrades(update: @escaping (Float) -> (), completionHandler: @escaping ([BuySuggestion]) -> ()) {
 		// Step 1: get holdings:
+        update(0.25)
 		getHoldings(filterBtc: true) {
 			holdings in
+            update(0.5)
 			// Step 2: fetch the current price for those currencies
 			self.attachCurrentPrices(toCurrencies: holdings) {
+                update(0.75)
 				// Step 3: get trading history
 				self.attachAllTrades(toCurrencies: holdings) {
+                    update(1)
 					// Step 4: create buy suggestions
 					completionHandler(self.calculateBuySellOptions(currencies: holdings))
 				}
