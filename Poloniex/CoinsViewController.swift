@@ -1,5 +1,5 @@
 //
-//  TradesViewController.swift
+//  CoinsViewController.swift
 //  Poloniex
 //
 //  Created by Wim Van Renterghem on 17/05/2017.
@@ -8,18 +8,21 @@
 
 import UIKit
 
-class TradesViewController: UIViewController {
+class CoinsViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var progressView: UIProgressView!
     
 	var refreshControl: UIRefreshControl!
 	
-	var trades: [BuySuggestion] = []
-    
-    var infoButton: UIBarButtonItem!
+	var coins: [BuySuggestion] = []
+	
+	var infoButton: UIBarButtonItem!
+	var sortButton: UIBarButtonItem!
     
     var activityIndicator: UIBarButtonItem!
+	
+	var currentSort: SortOrder = .invested
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +37,12 @@ class TradesViewController: UIViewController {
 		
 		// let performButton = UIBarButtonItem(title: "Do it!", style: .plain, target: self, action: #selector(performActions))
 		// TODO add to bar when buy & sell are ready
-        
-        infoButton = UIBarButtonItem(title: "Info", style: .done, target: self, action: #selector(showInfo))
+		
+		infoButton = UIBarButtonItem(title: "Info", style: .done, target: self, action: #selector(showInfo))
 		navigationItem.leftBarButtonItem = infoButton
+		
+		sortButton = UIBarButtonItem(title: "Sort", style: .done, target: self, action: #selector(changeSort))
+		navigationItem.rightBarButtonItem = sortButton
         
         let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         activityIndicatorView.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
@@ -62,7 +68,7 @@ class TradesViewController: UIViewController {
             self.progressView.progress = update
         }) {
             trades in
-            self.trades = trades.sorted {$0.currency.currentPrice!/$0.currency.weightedAverage > $1.currency.currentPrice!/$1.currency.weightedAverage}
+			self.coins = trades.sorted {$0.currency.currentHoldings * $0.currency.currentPrice! > $1.currency.currentHoldings * $1.currency.currentPrice!}
 			self.tableView.reloadData()
 			
 			self.refreshControl.endRefreshing()
@@ -80,16 +86,53 @@ class TradesViewController: UIViewController {
 			self.present(alert, animated: true, completion: nil)
 		}
 	}
+	
+	func changeSort() {
+		let alert = UIAlertController(title: "Pick a sort order", message: nil, preferredStyle: .alert)
+		for sortOrder in SortOrder.allValues {
+			
+			alert.addAction(UIAlertAction(title: "Sort by \(sortOrder)", style: .default, handler: {_ in self.applySort(sortOrder: sortOrder)}))
+		}
+		self.present(alert, animated: true, completion: nil)
+	}
+	
+	func applySort(sortOrder: SortOrder) {
+		currentSort = sortOrder
+		
+		switch currentSort {
+		case .invested:
+			self.coins = coins.sorted {$0.currency.currentHoldings * $0.currency.currentPrice! > $1.currency.currentHoldings * $1.currency.currentPrice!}
+		case .percentChange:
+			self.coins = coins.sorted {$0.currency.currentPrice!/$0.currency.weightedAverage > $1.currency.currentPrice!/$1.currency.weightedAverage}
+		}
+		
+		tableView.reloadData()
+	}
 }
 
-extension TradesViewController: UITableViewDataSource {
+extension CoinsViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return trades.count
+		return coins.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "tradeCell") as! TradeTableViewCell
-		cell.setData(trade: trades[indexPath.row])
+		let cell = tableView.dequeueReusableCell(withIdentifier: "tradeCell") as! CoinTableViewCell
+		cell.setData(buySuggestion: coins[indexPath.row])
 		return cell
 	}
+}
+
+extension CoinsViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let coin = coins[indexPath.row]
+		
+		// TODO open detail with all trades
+	}
+}
+
+enum SortOrder {
+	case invested
+	case percentChange
+	
+	static let allValues: Set<SortOrder> = [.invested, .percentChange]
 }

@@ -70,7 +70,7 @@ extension PoloniexAPI {
 		Alamofire.request(tradingEndPoint, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers)
 			.responseJSON(completionHandler: {
 				response in
-				if let error = (response.result.value as? [String: Any?])?["error"] {
+				if let responseDict = response.result.value as? [String: Any], let error = responseDict["error"] {
 					print(error)
 				} else {
 					completionHandler(response.result.value as? T)

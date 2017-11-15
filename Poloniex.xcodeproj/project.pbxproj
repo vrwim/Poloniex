@@ -10,10 +10,10 @@
 		24B656A77FDF4F4F555C3E1C /* Pods_PoloniexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176716D7D02E8FD788F1EB64 /* Pods_PoloniexTests.framework */; };
 		6589316416FD0F4B74839C1F /* Pods_Poloniex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DB55A0126931FEA7AC7B9E /* Pods_Poloniex.framework */; };
 		AB6188331EEA9C4100583D9F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6188321EEA9C4100583D9F /* Action.swift */; };
-		AB6C99941ECCE8D400A4088C /* TradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99931ECCE8D400A4088C /* TradesViewController.swift */; };
+		AB6C99941ECCE8D400A4088C /* CoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99931ECCE8D400A4088C /* CoinsViewController.swift */; };
 		AB6C99971ECCEB7700A4088C /* BuySuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99961ECCEB7700A4088C /* BuySuggestion.swift */; };
 		AB6C99991ECE166800A4088C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99981ECE166800A4088C /* Currency.swift */; };
-		AB6C999B1ECE3A2000A4088C /* TradeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C999A1ECE3A2000A4088C /* TradeTableViewCell.swift */; };
+		AB6C999B1ECE3A2000A4088C /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C999A1ECE3A2000A4088C /* CoinTableViewCell.swift */; };
 		AB6C999E1ED0794000A4088C /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C999D1ED0794000A4088C /* AttributedStringBuilder.swift */; };
 		ABB8FAB11EC7703B00D11AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAB01EC7703B00D11AF4 /* AppDelegate.swift */; };
 		ABB8FAB31EC7703B00D11AF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8FAB21EC7703B00D11AF4 /* LoginViewController.swift */; };
@@ -58,10 +58,10 @@
 		83142262A78E75142302A927 /* Pods-PoloniexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexUITests/Pods-PoloniexUITests.release.xcconfig"; sourceTree = "<group>"; };
 		83B32DF652F2838CFB60FC08 /* Pods-PoloniexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTests/Pods-PoloniexTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB6188321EEA9C4100583D9F /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		AB6C99931ECCE8D400A4088C /* TradesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradesViewController.swift; sourceTree = "<group>"; };
+		AB6C99931ECCE8D400A4088C /* CoinsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinsViewController.swift; sourceTree = "<group>"; };
 		AB6C99961ECCEB7700A4088C /* BuySuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuySuggestion.swift; sourceTree = "<group>"; };
 		AB6C99981ECE166800A4088C /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		AB6C999A1ECE3A2000A4088C /* TradeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeTableViewCell.swift; sourceTree = "<group>"; };
+		AB6C999A1ECE3A2000A4088C /* CoinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
 		AB6C999D1ED0794000A4088C /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
 		ABB8FAAD1EC7703B00D11AF4 /* Poloniex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poloniex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB8FAB01EC7703B00D11AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,8 +178,8 @@
 				ABB8FABC1EC7703B00D11AF4 /* LaunchScreen.storyboard */,
 				ABB8FABF1EC7703B00D11AF4 /* Info.plist */,
 				ABB8FAB71EC7703B00D11AF4 /* Poloniex.xcdatamodeld */,
-				AB6C99931ECCE8D400A4088C /* TradesViewController.swift */,
-				AB6C999A1ECE3A2000A4088C /* TradeTableViewCell.swift */,
+				AB6C99931ECCE8D400A4088C /* CoinsViewController.swift */,
+				AB6C999A1ECE3A2000A4088C /* CoinTableViewCell.swift */,
 			);
 			path = Poloniex;
 			sourceTree = "<group>";
@@ -528,7 +528,7 @@
 				ABCA0E791ECCCC9F00EC95E4 /* PoloniexController.swift in Sources */,
 				AB6188331EEA9C4100583D9F /* Action.swift in Sources */,
 				ABB8FAE51EC770CB00D11AF4 /* PoloniexAPI.swift in Sources */,
-				AB6C999B1ECE3A2000A4088C /* TradeTableViewCell.swift in Sources */,
+				AB6C999B1ECE3A2000A4088C /* CoinTableViewCell.swift in Sources */,
 				ABB8FAEC1ECA342A00D11AF4 /* Extensions.swift in Sources */,
 				ABB8FAB31EC7703B00D11AF4 /* LoginViewController.swift in Sources */,
 				ABB8FAEA1EC780AC00D11AF4 /* Crypto.swift in Sources */,
@@ -537,7 +537,7 @@
 				ABB8FAB91EC7703B00D11AF4 /* Poloniex.xcdatamodeld in Sources */,
 				AB6C99971ECCEB7700A4088C /* BuySuggestion.swift in Sources */,
 				AB6C999E1ED0794000A4088C /* AttributedStringBuilder.swift in Sources */,
-				AB6C99941ECCE8D400A4088C /* TradesViewController.swift in Sources */,
+				AB6C99941ECCE8D400A4088C /* CoinsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -153,6 +153,7 @@ extension PoloniexController {
 				let currencyPair = "BTC_\(currency.name)"
 				
 				if let hist = allHist?[currencyPair] {
+					// TODO: Also get BTC price at the moment of the trade, to calculate current holdings & invested in EUR
 					currency.trades = hist.map {
 						(Double($0["amount"] as! String)!, Double($0["rate"] as! String)!, $0["type"] as! String == "buy", Double($0["fee"] as! String)!)
 					}
