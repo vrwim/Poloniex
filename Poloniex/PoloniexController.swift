@@ -157,7 +157,19 @@ extension PoloniexController {
 					dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 					// TODO: Also get BTC price at the moment of the trade, to calculate current holdings & invested in EUR
 					currency.trades = hist.map {
-						(Double($0["amount"] as! String)!, Double($0["rate"] as! String)!, $0["type"] as! String == "buy", Double($0["fee"] as! String)!, dateFormatter.date(from: $0["date"] as! String)!)
+						dict in
+						let amount = Double(dict["amount"] as! String)!
+						let rate = Double(dict["rate"] as! String)!
+						let type = dict["type"] as! String == "buy"
+						let fee = Double(dict["fee"] as! String)!
+						let date = dateFormatter.date(from: dict["date"] as! String)!
+						let eurRate: Double?
+						if let btcPrice = CoindeskAPI.getBTCPrice(atDate: date) {
+							eurRate = rate * btcPrice
+						} else {
+							eurRate = nil
+						}
+						return Trade(amount: amount, price: rate, buy: type, fee: fee, date: date, eurRate: eurRate)
 					}
 				} else {
 					// TODO alert!

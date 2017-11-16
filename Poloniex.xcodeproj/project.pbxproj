@@ -12,6 +12,8 @@
 		AB052F471FBC56710087FCBF /* TradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB052F461FBC56710087FCBF /* TradesViewController.swift */; };
 		AB052F491FBC58A40087FCBF /* TradeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB052F481FBC58A40087FCBF /* TradeTableViewCell.swift */; };
 		AB6188331EEA9C4100583D9F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6188321EEA9C4100583D9F /* Action.swift */; };
+		AB6BFDF81FBDD6000098D4F7 /* CoindeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BFDF71FBDD6000098D4F7 /* CoindeskAPI.swift */; };
+		AB6BFDFA1FBDDFF50098D4F7 /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BFDF91FBDDFF50098D4F7 /* Trade.swift */; };
 		AB6C99941ECCE8D400A4088C /* CoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99931ECCE8D400A4088C /* CoinsViewController.swift */; };
 		AB6C99971ECCEB7700A4088C /* BuySuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99961ECCEB7700A4088C /* BuySuggestion.swift */; };
 		AB6C99991ECE166800A4088C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C99981ECE166800A4088C /* Currency.swift */; };
@@ -62,6 +64,8 @@
 		AB052F461FBC56710087FCBF /* TradesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradesViewController.swift; sourceTree = "<group>"; };
 		AB052F481FBC58A40087FCBF /* TradeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeTableViewCell.swift; sourceTree = "<group>"; };
 		AB6188321EEA9C4100583D9F /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		AB6BFDF71FBDD6000098D4F7 /* CoindeskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindeskAPI.swift; sourceTree = "<group>"; };
+		AB6BFDF91FBDDFF50098D4F7 /* Trade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
 		AB6C99931ECCE8D400A4088C /* CoinsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinsViewController.swift; sourceTree = "<group>"; };
 		AB6C99961ECCEB7700A4088C /* BuySuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuySuggestion.swift; sourceTree = "<group>"; };
 		AB6C99981ECE166800A4088C /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				AB6C99961ECCEB7700A4088C /* BuySuggestion.swift */,
 				AB6C99981ECE166800A4088C /* Currency.swift */,
 				AB6188321EEA9C4100583D9F /* Action.swift */,
+				AB6BFDF91FBDDFF50098D4F7 /* Trade.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				ABB8FAE41EC770CB00D11AF4 /* PoloniexAPI.swift */,
+				AB6BFDF71FBDD6000098D4F7 /* CoindeskAPI.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 				ABB8FAE51EC770CB00D11AF4 /* PoloniexAPI.swift in Sources */,
 				AB052F491FBC58A40087FCBF /* TradeTableViewCell.swift in Sources */,
 				AB6C999B1ECE3A2000A4088C /* CoinTableViewCell.swift in Sources */,
+				AB6BFDF81FBDD6000098D4F7 /* CoindeskAPI.swift in Sources */,
 				ABB8FAEC1ECA342A00D11AF4 /* Extensions.swift in Sources */,
 				ABB8FAB31EC7703B00D11AF4 /* LoginViewController.swift in Sources */,
 				ABB8FAEA1EC780AC00D11AF4 /* Crypto.swift in Sources */,
@@ -546,6 +553,7 @@
 				AB6C99971ECCEB7700A4088C /* BuySuggestion.swift in Sources */,
 				AB6C999E1ED0794000A4088C /* AttributedStringBuilder.swift in Sources */,
 				AB6C99941ECCE8D400A4088C /* CoinsViewController.swift in Sources */,
+				AB6BFDFA1FBDDFF50098D4F7 /* Trade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

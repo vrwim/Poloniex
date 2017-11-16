@@ -49,10 +49,6 @@ class CoinsViewController: UIViewController {
         activityIndicatorView.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
         activityIndicatorView.startAnimating()
         activityIndicator = UIBarButtonItem(customView: activityIndicatorView)
-    }
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
 		
 		refreshControl.beginRefreshing()
 		fetchTrades()
@@ -125,6 +121,8 @@ extension CoinsViewController: UITableViewDataSource {
 
 extension CoinsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		
 		let coin = coins[indexPath.row]
 		
 		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tradesVC") as! TradesViewController

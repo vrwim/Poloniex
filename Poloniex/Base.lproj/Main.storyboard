@@ -93,28 +93,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFM-fI-8qg">
-                                                    <rect key="frame" x="8" y="8" width="305" height="130.5"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="130.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-DK-JTn">
-                                                    <rect key="frame" x="321" y="8" width="46" height="130.5"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="bgo-DK-JTn" firstAttribute="leading" secondItem="DFM-fI-8qg" secondAttribute="trailing" constant="8" id="7K8-4Y-Rpr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DFM-fI-8qg" secondAttribute="trailing" id="8nC-Ky-ZBL"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="DFM-fI-8qg" secondAttribute="bottom" id="9zb-Ld-vcI"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="bgo-DK-JTn" secondAttribute="bottom" id="AlL-ku-BAp"/>
-                                                <constraint firstItem="bgo-DK-JTn" firstAttribute="top" secondItem="NVT-LR-gKY" secondAttribute="topMargin" id="L0I-0E-56b"/>
                                                 <constraint firstItem="DFM-fI-8qg" firstAttribute="leading" secondItem="NVT-LR-gKY" secondAttribute="leadingMargin" id="qB1-uw-jaC"/>
-                                                <constraint firstItem="bgo-DK-JTn" firstAttribute="trailing" secondItem="NVT-LR-gKY" secondAttribute="trailingMargin" id="r18-yp-o1R"/>
                                                 <constraint firstItem="DFM-fI-8qg" firstAttribute="top" secondItem="NVT-LR-gKY" secondAttribute="topMargin" id="w3G-gV-1D2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="buyButton" destination="bgo-DK-JTn" id="CHQ-Bx-HMI"/>
                                             <outlet property="titleLabel" destination="DFM-fI-8qg" id="4ex-tK-ajS"/>
                                         </connections>
                                     </tableViewCell>

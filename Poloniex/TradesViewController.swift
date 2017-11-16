@@ -13,7 +13,7 @@ class TradesViewController: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
 	
-	var trades: [(amount: Double, price: Double, buy: Bool, fee: Double, date: Date)]!
+	var trades: [Trade]!
 	var coin: String!
 	
 	override func viewDidLoad() {

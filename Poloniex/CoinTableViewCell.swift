@@ -11,43 +11,37 @@ import UIKit
 class CoinTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var titleLabel: UILabel!
-	@IBOutlet weak var buyButton: UIButton!
 	
 	func setData(buySuggestion: BuySuggestion) {
 		
-		let currentStatus = buySuggestion.currency.currentPrice!/buySuggestion.currency.weightedAverage - 1;
+		let currentStatus = buySuggestion.currency.currentPrice!/buySuggestion.currency.weightedAverage - 1
+		
+		let currentEurStatus: Double?
+		if let btcPrice = CoindeskAPI.getCurrentBTCPrice(), let eurAverage = buySuggestion.currency.weightedEurAverage {
+			currentEurStatus = buySuggestion.currency.currentPrice! * btcPrice/eurAverage - 1
+		} else {
+			currentEurStatus = nil
+		}
 		
 		let boldStyle = Style(font: UIFont.boldSystemFont(ofSize: 20), color: UIColor.black)
 		let redStyle = Style(font: UIFont.systemFont(ofSize: 17), color: UIColor.red)
 		let greenStyle = Style(font: UIFont.systemFont(ofSize: 17), color: UIColor.green)
 		let grayStyle = Style(font: UIFont.systemFont(ofSize: 17), color: UIColor.gray)
 		
-		titleLabel.attributedText = AttributedStringBuilder()
+		let stringBuilder = AttributedStringBuilder()
 			.append(text: buySuggestion.currency.name, style: boldStyle)
 			.append(text: " (\(String(format: "%.8f", buySuggestion.currency.currentPrice ?? 0))) ")
 			.append(text: "\(currentStatus > 0 ? "+" : "")\(String(format: "%.2f", currentStatus * 100))%", style: buySuggestion.suggestedAction == .buy ? redStyle : buySuggestion.suggestedAction == .sell ? greenStyle : grayStyle)
-			.append(text: "\n")
-			.append(text: "You have: \(buySuggestion.currency.currentHoldings) \(buySuggestion.currency.name)")
-			.append(text: "\n")
-			.append(text: "Worth: \(String(format: "%.8f", buySuggestion.currency.currentValue)) BTC")
-			.append(text: "\n")
-			.append(text: "Average price of \(String(format: "%.8f", buySuggestion.currency.weightedAverage)) BTC")
-			.append(text: "\n")
-			.append(text: "Invested \(String(format: "%.8f", buySuggestion.currency.currentHoldings*buySuggestion.currency.weightedAverage)) BTC")
-			.attributedString
-		
-		switch(buySuggestion.suggestedAction) {
-		case .buy:
-			buyButton.setTitleColor(UIColor.green, for: .normal)
-			buyButton.isHidden = false
-		case .sell:
-			buyButton.setTitleColor(UIColor.red, for: .normal)
-			buyButton.isHidden = false
-		case .hodl:
-			buyButton.setTitleColor(UIColor.red, for: .normal)
-			buyButton.isHidden = true
+		if let currentEurStatus = currentEurStatus {
+			_ = stringBuilder.append(text: " €\(currentEurStatus > 0 ? "+" : "")\(String(format: "%.2f", currentEurStatus * 100))%", style: currentEurStatus > 0 ? greenStyle : redStyle)
 		}
-		
-		buyButton.setTitle(buySuggestion.suggestedAction.toString(), for: .normal)
+		_ = stringBuilder.append(text: "\nYou have: \(buySuggestion.currency.currentHoldings) \(buySuggestion.currency.name)")
+			.append(text: "\nWorth: \(String(format: "%.8f", buySuggestion.currency.currentValue)) BTC")
+			.append(text: "\nAverage price of \(String(format: "%.8f", buySuggestion.currency.weightedAverage)) BTC")
+		if let eurAverage = buySuggestion.currency.weightedEurAverage {
+			_ = stringBuilder.append(text: "\nOr average price of \(String(format: "%.8f", eurAverage)) EUR")
+		}
+		_ = stringBuilder.append(text: "\nInvested \(String(format: "%.8f", buySuggestion.currency.currentHoldings*buySuggestion.currency.weightedAverage)) BTC")
+		titleLabel.attributedText = stringBuilder.attributedString
 	}
 }
