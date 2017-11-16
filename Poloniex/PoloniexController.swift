@@ -153,9 +153,11 @@ extension PoloniexController {
 				let currencyPair = "BTC_\(currency.name)"
 				
 				if let hist = allHist?[currencyPair] {
+					let dateFormatter = DateFormatter()
+					dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 					// TODO: Also get BTC price at the moment of the trade, to calculate current holdings & invested in EUR
 					currency.trades = hist.map {
-						(Double($0["amount"] as! String)!, Double($0["rate"] as! String)!, $0["type"] as! String == "buy", Double($0["fee"] as! String)!)
+						(Double($0["amount"] as! String)!, Double($0["rate"] as! String)!, $0["type"] as! String == "buy", Double($0["fee"] as! String)!, dateFormatter.date(from: $0["date"] as! String)!)
 					}
 				} else {
 					// TODO alert!

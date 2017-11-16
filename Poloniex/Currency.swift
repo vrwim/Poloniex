@@ -15,7 +15,7 @@ class Currency {
 	var currentPrice: Double?
 	
 	/// (the amount that has been bought/sold, the price at which it has been bought/sold, whether this is a buy trade, the fee in percent of the amount)
-	var trades: [(amount: Double, price: Double, buy: Bool, fee: Double)] = [] {
+	var trades: [(amount: Double, price: Double, buy: Bool, fee: Double, date: Date)] = [] {
 		didSet {
 			let (transactedCoins, totalWeightedRate, _) = trades.reversed().reduce((Double(0), Double(0), Double(0))) {
 				result, newValue in

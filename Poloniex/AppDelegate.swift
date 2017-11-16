@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		
 		let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-		let initialViewController = mainStoryboard.instantiateViewController(withIdentifier: PoloniexController.instance.isLoggedIn ? "tradesVC" : "loginVC") as UIViewController
+		let initialViewController = mainStoryboard.instantiateViewController(withIdentifier: PoloniexController.instance.isLoggedIn ? "coinsVC" : "loginVC") as UIViewController
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		self.window!.rootViewController = initialViewController
 		self.window!.makeKeyAndVisible()

@@ -32,6 +32,7 @@ class CoinsViewController: UIViewController {
 		tableView.addSubview(refreshControl)
 		
 		tableView.dataSource = self
+		tableView.delegate = self
 		tableView.rowHeight = UITableViewAutomaticDimension
 		tableView.estimatedRowHeight = 60
 		
@@ -116,7 +117,7 @@ extension CoinsViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "tradeCell") as! CoinTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "coinCell") as! CoinTableViewCell
 		cell.setData(buySuggestion: coins[indexPath.row])
 		return cell
 	}
@@ -126,7 +127,9 @@ extension CoinsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let coin = coins[indexPath.row]
 		
-		// TODO open detail with all trades
+		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tradesVC") as! TradesViewController
+		vc.setCoin(coin: coin)
+		navigationController?.pushViewController(vc, animated: true)
 	}
 }
 
